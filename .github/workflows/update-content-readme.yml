@@ -1,0 +1,26 @@
+
+name: Update Content Index
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'content/**.md'
+      - 'scripts/generate_content_readme.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate content README
+        run: python scripts/generate_content_readme.py
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'docs(content): refresh content/README.md'
+          file_pattern: content/README.md
