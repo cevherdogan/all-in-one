@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hostinger Üzerinden GitHub Pages Özel Alan Adı Kurulumu</title>
+  <meta name="description" content="all-in-one.foundral.tech alan adını GitHub Pages sitesine yönlendirme adım adım kılavuzu.">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Hostinger Üzerinden GitHub Pages Özel Alan Adı Kurulumu</h1>
+    <div class="nav">
+      <a class="button" href="en.html">English</a>
+      <a class="button" href="../../site/index.html">Ana Sayfa</a>
+    </div>
+    
+    <p class="meta">
+      <span class="badge">Rehber</span><span class="badge">GitHub Pages</span><span class="badge">DNS</span>
+    </p>
+    
+  </div>
+</header>
+<main>
+  <div class="container">
+    <article class="card">
+      <p>Bu kılavuz, <strong>Hostinger</strong> üzerinden yönetilen bir alan adını <strong>GitHub Pages</strong> sitesine bağlama sürecini, `all-in-one.foundral.tech` örneğiyle anlatır.</p>
+<h2>1. Ön Gereklilikler</h2>
+<ul>
+<li>GitHub Pages etkin bir depo:</li>
+</ul>
+<p>Örnek: https://github.com/cevherdogan/all-in-one Varsayılan Pages adresi: https://cevherdogan.github.io/all-in-one/</p>
+<ul>
+<li>`foundral.tech` alanı için Hostinger **hPanel** erişimi.</li>
+</ul>
+<h2>2. Hostinger'da CNAME Kaydı Ekleme</h2>
+<p>1. Hostinger’a giriş yap: [DNS Zone Editor](https://hpanel.hostinger.com/domain/foundral.tech/dns) 2. <strong>Add New Record</strong> (Yeni Kayıt Ekle) seçeneğine tıkla. 3. Şu bilgileri gir: ``` Type: CNAME Name: all-in-one   (@ işareti olmadan) Target: cevherdogan.github.io TTL: 3600 ``` 4. Kaydet.</p>
+<h2>3. GitHub Pages Ayarları</h2>
+<p>1. Depo <strong>Settings → Pages</strong> menüsüne git. 2. <strong>Custom domain</strong> alanına şunu yaz: ``` all-in-one.foundral.tech ``` 3. “Enforce HTTPS” seçeneğini işaretle (DNS çözüldükten sonra etkinleşir).</p>
+<h2>4. DNS Yayılımını Bekle</h2>
+<ul>
+<li>Bu işlem 15 dakika ile 24 saat arasında sürebilir.</li>
+<li>Doğrulamak için:</li>
+</ul>
+<p>``` nslookup all-in-one.foundral.tech ``` veya [whatsmydns.net](https://www.whatsmydns.net/) gibi çevrimiçi araçları kullan.</p>
+<h2>5. Sitenin Yayında Olduğunu Doğrula</h2>
+<p>DNS çözüldükten ve HTTPS etkinleştikten sonra siteniz şu adreste yayında olacaktır: <strong>https://all-in-one.foundral.tech/</strong></p>
+<h2>✅ Örnek Yayın Günlüğü</h2>
+<p>> “Your site is live at https://all-in-one.foundral.tech/ > Last deployed by @cevherdogan — 13 minutes ago”</p>
+<h2>Topluluk Öğrenimi</h2>
+<p>Bu süreç, tüm katılımcıların:</p>
+<ul>
+<li>Alan adı yönlendirme temellerini öğrenmesi,</li>
+<li>Kendi projelerinde uygulaması,</li>
+<li>Bu kılavuzun farklı dil çevirilerine katkı yapması</li>
+</ul>
+<p>için belgelenmiştir.</p>
+    </article>
+  </div>
+</main>
+<footer>
+  <div class="container">
+    <p>&copy; 2025 İki Dilli Makaleler. MIT Lisanslıdır.</p>
+  </div>
+</footer>
+</body>
+</html>
