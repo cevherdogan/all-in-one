@@ -1,7 +1,7 @@
 # 📚 Content Index – All-in-One Project
 
 This directory contains bilingual guides and articles. The table below is **auto-generated**; do not edit manually.
-_Last updated: 2025-08-08 21:56 UTC_
+_Last updated: 2025-08-08 22:00 UTC_
 
 | File | Language | Summary | Links |
 |------|----------|---------|-------|
@@ -13,6 +13,7 @@ _Last updated: 2025-08-08 21:56 UTC_
 | `deployments-releases-guide.tr.md` | Turkish | **Deployments, Sürümler ve Dal (Branch) Stratejisi** — Katkıcılar için kılavuz: deployments, sürüm notları, changelog, etiketleme ve dal (branch) stratejisi. | [deployments-releases-guide.tr.md](https://github.com/cevherdogan/all-in-one/blob/main/content/deployments-releases-guide.tr.md) · [HTML](https://cevherdogan.github.io/all-in-one/articles/deployments-releases-guide/tr.html) |
 | `dpp.en.md` | English | **Digital Product Passport: The Future of Transparency in Every Product You Buy** — Discover how the Digital Product Passport is transforming transparency in manufacturing, retail, and sustainability by 2026. | [dpp.en.md](https://github.com/cevherdogan/all-in-one/blob/main/content/dpp.en.md) · [HTML](https://cevherdogan.github.io/all-in-one/articles/dpp/en.html) |
 | `dpp.tr.md` | Turkish | **Dijital Ürün Pasaportu: Satın Aldığınız Her Üründe Şeffaflığın Geleceği** — Dijital Ürün Pasaportu ile üretimden geri dönüşüme kadar ürünlerin şeffaflığı nasıl değişiyor, 2026'dan itibaren sizi neler bekliyor öğrenin. | [dpp.tr.md](https://github.com/cevherdogan/all-in-one/blob/main/content/dpp.tr.md) · [HTML](https://cevherdogan.github.io/all-in-one/articles/dpp/tr.html) |
+| `README.md` | Unknown | **README.md** — — | [README.md](https://github.com/cevherdogan/all-in-one/blob/main/content/README.md) |
 
 ## How to add content
 1) Create paired files like `my-topic.en.md` and `my-topic.tr.md` with front matter (title, description, slug, lang).
