@@ -1,0 +1,11 @@
+
+# CODEOWNERS — reviewers by area
+# Syntax: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+*       @cevherdogan
+
+/content/*           @cevherdogan
+/templates/*         @cevherdogan
+/articles/*          @cevherdogan
+/assets/css/*        @cevherdogan
+.github/*            @cevherdogan

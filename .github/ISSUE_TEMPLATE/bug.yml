@@ -1,0 +1,41 @@
+
+name: Bug Report
+description: Report a problem or regression
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the issue and expected behavior.
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Affected URL (if any)
+      placeholder: https://all-in-one.foundral.tech/...
+  - type: dropdown
+    id: languages
+    attributes:
+      label: Languages involved
+      multiple: true
+      options:
+        - tr
+        - en
+        - ar
+        - fa
+        - de
+        - sv
+        - fr
+        - el
+        - ru
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to Reproduce
+      placeholder: 1) ... 2) ... 3) ...
+  - type: textarea
+    id: extra
+    attributes:
+      label: Extra context

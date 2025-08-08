@@ -1,0 +1,49 @@
+
+name: Content / Guide Request
+description: Propose a new article/guide or translation
+labels: ["enhancement","content"]
+body:
+  - type: input
+    id: slug
+    attributes:
+      label: Slug
+      description: Unique identifier (used for filenames)
+      placeholder: my-topic
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Why is this useful and who is it for?
+    validations:
+      required: true
+  - type: checkboxes
+    id: languages
+    attributes:
+      label: Target Languages
+      options:
+        - label: tr
+        - label: en
+        - label: ar
+        - label: fa
+        - label: de
+        - label: sv
+        - label: fr
+        - label: el
+        - label: ru
+  - type: textarea
+    id: outline
+    attributes:
+      label: Outline
+      placeholder: |
+        - Intro
+        - Definition
+        - Why now?
+        - Impact
+        - Opportunities
+        - Conclusion
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources / References
