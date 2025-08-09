@@ -27,4 +27,7 @@ jobs:
     - name: Generate Articles Index
       run: |
         python3 scripts/build_articles_index.py
+    - name: Generate Articles Index (thumbs)
+       run: python3 scripts/build_articles_index.py
+
 

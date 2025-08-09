@@ -1,5 +1,17 @@
 # all-in-one
 
+[![Pages Deploy](https://img.shields.io/github/actions/workflow/status/cevherdogan/all-in-one/pages-build-deployment.yml?label=pages)](https://all-in-one.foundral.tech/)
+[![Content Index](https://img.shields.io/github/actions/workflow/status/cevherdogan/all-in-one/update-content-readme.yml?label=content%20index)](https://github.com/cevherdogan/all-in-one/actions/workflows/update-content-readme.yml)
+[![Release Drafter](https://img.shields.io/github/actions/workflow/status/cevherdogan/all-in-one/release-drafter.yml?label=release%20drafter)](https://github.com/cevherdogan/all-in-one/actions/workflows/release-drafter.yml)
+[![Latest Release](https://img.shields.io/github/v/release/cevherdogan/all-in-one)](https://github.com/cevherdogan/all-in-one/releases)
+[![License](https://img.shields.io/github/license/cevherdogan/all-in-one)](LICENSE)
+
+**👉 Live site:** https://all-in-one.foundral.tech/  
+**Articles:** https://all-in-one.foundral.tech/articles/  
+**Digital Art:** https://all-in-one.foundral.tech/digital-art/
+
+# all-in-one
+
 > This repo backs the public site.
 
 **👉 Visit the live site:** https://all-in-one.foundral.tech/
