@@ -1,12 +1,13 @@
 # 📚 Content Index – All-in-One Project
 
 This directory contains bilingual guides and articles. The table below is **auto-generated**; do not edit manually.
-_Last updated: 2025-08-09 05:56 UTC_
+_Last updated: 2025-08-09 05:57 UTC_
 
 | File | Language | Summary | Links |
 |------|----------|---------|-------|
 | `all-in-one-collab.en.md` | English | **Open Collaboration: Profit & Non-Profit Paths in ALL-IN-ONE** — Exploring collaboration points in the ALL-IN-ONE project: from PR templates to automated publishing, in both profit and non-profit contexts. | [all-in-one-collab.en.md](https://github.com/cevherdogan/all-in-one/blob/main/content/all-in-one-collab.en.md) · [HTML](https://cevherdogan.github.io/all-in-one/articles/all-in-one-collab/en.html) |
 | `all-in-one-collab.tr.md` | Turkish | **Açık Katılım: ALL-IN-ONE’da Kâr ve Kar Amacı Gütmeyen Yollar** — ALL-IN-ONE projesinde PR şablonlarından otomatik yayınlamaya kadar hem kâr hem de kar amacı gütmeyen bağlamlarda işbirliği noktaları. | [all-in-one-collab.tr.md](https://github.com/cevherdogan/all-in-one/blob/main/content/all-in-one-collab.tr.md) · [HTML](https://cevherdogan.github.io/all-in-one/articles/all-in-one-collab/tr.html) |
+| `articles-classic.md` | Unknown | **Bilingual Articles** — — | [articles-classic.md](https://github.com/cevherdogan/all-in-one/blob/main/content/articles-classic.md) |
 | `custom-domain-guide.en.md` | English | **Setting up a Custom Domain on GitHub Pages via Hostinger** — Step-by-step guide for mapping all-in-one.foundral.tech to a GitHub Pages site. | [custom-domain-guide.en.md](https://github.com/cevherdogan/all-in-one/blob/main/content/custom-domain-guide.en.md) · [HTML](https://cevherdogan.github.io/all-in-one/articles/custom-domain-guide/en.html) |
 | `custom-domain-guide.tr.md` | Turkish | **Hostinger Üzerinden GitHub Pages Özel Alan Adı Kurulumu** — all-in-one.foundral.tech alan adını GitHub Pages sitesine yönlendirme adım adım kılavuzu. | [custom-domain-guide.tr.md](https://github.com/cevherdogan/all-in-one/blob/main/content/custom-domain-guide.tr.md) · [HTML](https://cevherdogan.github.io/all-in-one/articles/custom-domain-guide/tr.html) |
 | `deployments-releases-guide.en.md` | English | **Understanding Deployments, Releases, and Branch Strategy** — Guide for contributors: using deployments, release notes, changelog, tagging, and branching strategy in ALL-IN-ONE. | [deployments-releases-guide.en.md](https://github.com/cevherdogan/all-in-one/blob/main/content/deployments-releases-guide.en.md) · [HTML](https://cevherdogan.github.io/all-in-one/articles/deployments-releases-guide/en.html) |
