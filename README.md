@@ -1,3 +1,11 @@
+# all-in-one
+
+> This repo backs the public site.
+
+**👉 Visit the live site:** https://all-in-one.foundral.tech/
+
+- Start page: [`site/index.html`](site/index.html)
+- Articles index: https://all-in-one.foundral.tech/articles/
 
 # DPP Bilingual Articles (EN/TR)
 

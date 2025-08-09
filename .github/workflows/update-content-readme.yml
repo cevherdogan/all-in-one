@@ -24,3 +24,7 @@ jobs:
         with:
           commit_message: 'docs(content): refresh content/README.md'
           file_pattern: content/README.md
+    - name: Generate Articles Index
+      run: |
+        python3 scripts/build_articles_index.py
+
