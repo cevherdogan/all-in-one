@@ -1,0 +1,56 @@
+# .github/workflows/deploy-pages.yml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install jinja2 pyyaml markdown
+
+      - name: Generate site
+        run: |
+          python scripts/generate.py
+          # keep root in sync with /site
+          cp -f site/index.html index.html
+          touch .nojekyll
+          # If you want artifact to carry CNAME too (not strictly required since you've set it in Settings)
+          echo "all-in-one.foundral.tech" > CNAME
+
+      - name: Upload artifact (root of repo)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
