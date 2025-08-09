@@ -1,0 +1,16 @@
+[
+  {
+    "owner": "cevherdogan",
+    "name": "gitflow-meta-tools",
+    "title": "Gitflow Meta Tools",
+    "summary": "Git flow, release ve meta otomasyon yardımcıları.",
+    "thumb": "/assets/brewery/cevherdogan-gitflow-meta-tools.png"
+  },
+  {
+    "owner": "cevherdogan",
+    "name": "repobuilder-gpt",
+    "title": "RepoBuilder GPT",
+    "summary": "Şablondan repo kurup CI/CD ve dokümantasyonla hazırlayan bot.",
+    "thumb": "/assets/brewery/cevherdogan-repobuilder-gpt.png"
+  }
+]
