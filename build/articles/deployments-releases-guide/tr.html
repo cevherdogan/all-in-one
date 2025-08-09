@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deployments, Sürümler ve Dal (Branch) Stratejisi</title>
+  <meta name="description" content="Katkıcılar için kılavuz: deployments, sürüm notları, changelog, etiketleme ve dal (branch) stratejisi.">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Deployments, Sürümler ve Dal (Branch) Stratejisi</h1>
+    <div class="nav">
+      <a class="button" href="en.html">English</a>
+      <a class="button" href="../../site/index.html">Ana Sayfa</a>
+    </div>
+    
+    <p class="meta">
+      <span class="badge">Rehber</span><span class="badge">Git Akışı</span><span class="badge">Sürüm Yönetimi</span>
+    </p>
+    
+  </div>
+</header>
+<main>
+  <div class="container">
+    <article class="card">
+      <p>Bu kılavuz, ALL-IN-ONE projesinde <strong>deployment geçmişi</strong>, <strong>sürüm notları</strong> ve <strong>dal/etiket (tag) stratejisini</strong> nasıl okuyacağınızı ve uygulayacağınızı açıklar.</p>
+<h2>1. Deployments Nasıl Kontrol Edilir?</h2>
+<ul>
+<li>Adres: [GitHub → Deployments](https://github.com/cevherdogan/all-in-one/deployments)</li>
+<li>Her deployment kaydında şu bilgiler yer alır:</li>
+<li>**Environment** (örn. `github-pages`)</li>
+<li>**Commit hash**</li>
+<li>**Deployed by** (kim yayınladı)</li>
+<li>**Timestamp** (zaman)</li>
+<li>En son içeriğin ne zaman canlıya alındığını buradan teyit edebilirsiniz.</li>
+</ul>
+<h2>2. Release Notes (Sürüm Notları)</h2>
+<ul>
+<li>Sürüm notları, etiketlenmiş her sürümde nelerin değiştiğini özetler.</li>
+<li>Gelecekteki sürümlerde şunlar yer alacaktır:</li>
+<li>**Yeni makaleler/rehberler**</li>
+<li>**Şablon güncellemeleri**</li>
+<li>**Otomasyon iyileştirmeleri**</li>
+<li>Erişim: GitHub → **Releases** sekmesi.</li>
+</ul>
+<h2>3. CHANGELOG.md</h2>
+<ul>
+<li>`CHANGELOG.md`, değişiklikleri kronolojik sırayla listeler.</li>
+<li>Format:</li>
+</ul>
+<p>```</p>
+<h2>[vX.Y.Z] - YYYY-MM-DD</h2>
+<p>### Added</p>
+<ul>
+<li>Yeni içerik veya özellik</li>
+</ul>
+<p>### Changed</p>
+<ul>
+<li>Mevcut sayfalarda güncellemeler</li>
+</ul>
+<p>### Fixed</p>
+<ul>
+<li>Hata düzeltmeleri</li>
+</ul>
+<p>```</p>
+<ul>
+<li>Anlamlı her değişiklikte changelog’u güncellemek katkıcı sorumluluğudur.</li>
+</ul>
+<h2>4. Etiketleme (Tagging) Stratejisi</h2>
+<ul>
+<li>Semantik versiyonlama: `vMAJOR.MINOR.PATCH`</li>
+<li>**MAJOR**: Geriye dönük uyumsuz kırıcı değişiklikler</li>
+<li>**MINOR**: Yeni içerik/özellikler</li>
+<li>**PATCH**: Küçük düzeltmeler</li>
+<li>Örnek:</li>
+<li>`v1.0.0` — ilk genel sürüm</li>
+<li>`v1.1.0` — 3 yeni rehber eklendi</li>
+<li>`v1.1.1` — yazım ve bağlantı düzeltmeleri</li>
+</ul>
+<h2>5. Dal (Branch) Stratejisi</h2>
+<ul>
+<li>`main` **kilitlidir** — doğrudan push kapalıdır.</li>
+<li>Tüm değişiklikler fork’tan gelen **Pull Request**’lerle yapılır.</li>
+<li>Dal isimleri:</li>
+<li>`feature/<kısa-açıklama>` — yeni içerik/özellik</li>
+<li>`fix/<kısa-açıklama>` — hata/düzeltme</li>
+<li>`docs/<kısa-açıklama>` — yalnız dokümantasyon</li>
+<li>PR şartları:</li>
+<li>Otomatik kontrollerden geçmek</li>
+<li>İnceleme ve onay almak</li>
+</ul>
+<h2>6. Neden Önemli?</h2>
+<ul>
+<li>**Şeffaflık**: Ne zaman, neyin canlıya alındığı net görünür.</li>
+<li>**Kalite**: Eş değerlendirme (peer review) tutarlılığı artırır.</li>
+<li>**İzlenebilirlik**: Etiket ve changelog, sürümler arasında takibi kolaylaştırır.</li>
+</ul>
+<h2>Topluluk Öğrenimi</h2>
+<p>Bu kılavuzu takip ederek yöneticiler, katkıcılar ve okuyucular kolayca:</p>
+<ul>
+<li>Yenilikleri görebilir</li>
+<li>İş akışını anlayabilir</li>
+<li>Tahmin yürütmeden projeye dahil olabilir</li>
+</ul>
+    </article>
+  </div>
+</main>
+<footer>
+  <div class="container">
+    <p>&copy; 2025 İki Dilli Makaleler. MIT Lisanslıdır.</p>
+  </div>
+</footer>
+</body>
+</html>

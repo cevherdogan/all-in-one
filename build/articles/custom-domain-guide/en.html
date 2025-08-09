@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setting up a Custom Domain on GitHub Pages via Hostinger</title>
+  <meta name="description" content="Step-by-step guide for mapping all-in-one.foundral.tech to a GitHub Pages site.">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Setting up a Custom Domain on GitHub Pages via Hostinger</h1>
+    <div class="nav">
+      <a class="button" href="tr.html">Türkçe</a>
+      <a class="button" href="../../site/index.html">Home</a>
+    </div>
+    
+    <p class="meta">
+      <span class="badge">Guide</span><span class="badge">GitHub Pages</span><span class="badge">DNS</span>
+    </p>
+    
+  </div>
+</header>
+<main>
+  <div class="container">
+    <article class="card">
+      <p>This guide walks you through connecting a <strong>Hostinger-managed domain</strong> to a <strong>GitHub Pages</strong> site, using the example `all-in-one.foundral.tech`.</p>
+<h2>1. Prerequisites</h2>
+<ul>
+<li>A GitHub Pages-enabled repository:</li>
+</ul>
+<p>Example: https://github.com/cevherdogan/all-in-one Default Pages URL: https://cevherdogan.github.io/all-in-one/</p>
+<ul>
+<li>Access to Hostinger’s **hPanel** for `foundral.tech`.</li>
+</ul>
+<h2>2. Add a CNAME Record in Hostinger</h2>
+<p>1. Log into Hostinger: [DNS Zone Editor](https://hpanel.hostinger.com/domain/foundral.tech/dns) 2. Click <strong>Add New Record</strong>. 3. Fill in: ``` Type: CNAME Name: all-in-one   (without @) Target: cevherdogan.github.io TTL: 3600 ``` 4. Save changes.</p>
+<h2>3. Configure GitHub Pages</h2>
+<p>1. Go to your repo’s <strong>Settings → Pages</strong>. 2. In <strong>Custom domain</strong>, enter: ``` all-in-one.foundral.tech ``` 3. Check <strong>Enforce HTTPS</strong> (enable after DNS resolves).</p>
+<h2>4. Wait for DNS Propagation</h2>
+<ul>
+<li>This can take 15 minutes to 24 hours.</li>
+<li>Verify with:</li>
+</ul>
+<p>``` nslookup all-in-one.foundral.tech ``` or online tools like [whatsmydns.net](https://www.whatsmydns.net/).</p>
+<h2>5. Confirm Your Site is Live</h2>
+<p>Once DNS resolves and HTTPS is enforced, your site will be live at: <strong>https://all-in-one.foundral.tech/</strong></p>
+<h2>✅ Example Deployment Log</h2>
+<p>> “Your site is live at https://all-in-one.foundral.tech/ > Last deployed by @cevherdogan — 13 minutes ago”</p>
+<h2>Community Learning</h2>
+<p>This process is now documented for all contributors to:</p>
+<ul>
+<li>Learn domain mapping basics</li>
+<li>Replicate for their own projects</li>
+<li>Contribute localized translations of this guide</li>
+</ul>
+    </article>
+  </div>
+</main>
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Bilingual Articles. MIT Licensed.</p>
+  </div>
+</footer>
+</body>
+</html>

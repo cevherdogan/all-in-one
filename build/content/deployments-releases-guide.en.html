@@ -1,0 +1,69 @@
+<p>This guide helps contributors and readers navigate <strong>deployment history</strong>, <strong>release notes</strong>, and our <strong>branching/tagging strategy</strong> in the ALL-IN-ONE project.</p>
+<h2 id="1-checking-deployments">1. Checking Deployments</h2>
+<ul>
+<li>Visit: <a href="https://github.com/cevherdogan/all-in-one/deployments">GitHub → Deployments</a></li>
+<li>Each deployment entry shows:</li>
+<li><strong>Environment</strong> (e.g., <code>github-pages</code>)</li>
+<li><strong>Commit hash</strong></li>
+<li><strong>Deployed by</strong></li>
+<li><strong>Timestamp</strong></li>
+<li>Use this to confirm when the latest content went live.</li>
+</ul>
+<h2 id="2-reading-release-notes">2. Reading Release Notes</h2>
+<ul>
+<li>Release notes summarize what changed in a given tagged version.</li>
+<li>Future releases will include:</li>
+<li><strong>New articles/guides</strong></li>
+<li><strong>Template updates</strong></li>
+<li><strong>Automation improvements</strong></li>
+<li>Access: GitHub → <strong>Releases</strong> tab.</li>
+</ul>
+<h2 id="3-changelogmd">3. CHANGELOG.md</h2>
+<ul>
+<li>The <code>CHANGELOG.md</code> file lists changes in chronological order.</li>
+<li>Format:
+  ```
+  ## [vX.Y.Z] - YYYY-MM-DD
+  ### Added</li>
+<li>New content or feature</li>
+</ul>
+<p>### Changed
+  - Updates to existing pages</p>
+<p>### Fixed
+  - Bug fixes or corrections
+  ```
+- Contributors should update it for every meaningful change.</p>
+<h2 id="4-tagging-strategy">4. Tagging Strategy</h2>
+<ul>
+<li>Semantic versioning: <code>vMAJOR.MINOR.PATCH</code></li>
+<li><strong>MAJOR</strong>: Breaking changes</li>
+<li><strong>MINOR</strong>: New content/features</li>
+<li><strong>PATCH</strong>: Fixes or minor updates</li>
+<li>Example:</li>
+<li><code>v1.0.0</code> — initial public release</li>
+<li><code>v1.1.0</code> — added 3 new guides</li>
+<li><code>v1.1.1</code> — fixed typos and links</li>
+</ul>
+<h2 id="5-branching-strategy">5. Branching Strategy</h2>
+<ul>
+<li><code>main</code> is <strong>locked</strong> — direct pushes are disabled.</li>
+<li>All changes come through <strong>Pull Requests</strong> from forks.</li>
+<li>Suggested branch naming:</li>
+<li><code>feature/&lt;short-description&gt;</code> — new content or functionality</li>
+<li><code>fix/&lt;short-description&gt;</code> — bug or typo fixes</li>
+<li><code>docs/&lt;short-description&gt;</code> — documentation-only changes</li>
+<li>PRs must:</li>
+<li>Pass automated checks</li>
+<li>Be reviewed and approved</li>
+</ul>
+<h2 id="6-why-this-matters">6. Why This Matters</h2>
+<ul>
+<li><strong>Transparency</strong>: Clear history of what was deployed and when.</li>
+<li><strong>Quality Control</strong>: Peer review ensures accuracy and consistency.</li>
+<li><strong>Traceability</strong>: Tags and changelog entries help track features across versions.</li>
+</ul>
+<h2 id="community-learning">Community Learning</h2>
+<p>Following this guide ensures everyone — maintainers, contributors, and readers — can easily:
+- See what’s new
+- Understand the workflow
+- Join the project without guesswork</p>

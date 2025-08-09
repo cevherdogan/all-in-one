@@ -1,0 +1,69 @@
+<p>Bu kılavuz, ALL-IN-ONE projesinde <strong>deployment geçmişi</strong>, <strong>sürüm notları</strong> ve <strong>dal/etiket (tag) stratejisini</strong> nasıl okuyacağınızı ve uygulayacağınızı açıklar.</p>
+<h2 id="1-deployments-nasl-kontrol-edilir">1. Deployments Nasıl Kontrol Edilir?</h2>
+<ul>
+<li>Adres: <a href="https://github.com/cevherdogan/all-in-one/deployments">GitHub → Deployments</a></li>
+<li>Her deployment kaydında şu bilgiler yer alır:</li>
+<li><strong>Environment</strong> (örn. <code>github-pages</code>)</li>
+<li><strong>Commit hash</strong></li>
+<li><strong>Deployed by</strong> (kim yayınladı)</li>
+<li><strong>Timestamp</strong> (zaman)</li>
+<li>En son içeriğin ne zaman canlıya alındığını buradan teyit edebilirsiniz.</li>
+</ul>
+<h2 id="2-release-notes-surum-notlar">2. Release Notes (Sürüm Notları)</h2>
+<ul>
+<li>Sürüm notları, etiketlenmiş her sürümde nelerin değiştiğini özetler.</li>
+<li>Gelecekteki sürümlerde şunlar yer alacaktır:</li>
+<li><strong>Yeni makaleler/rehberler</strong></li>
+<li><strong>Şablon güncellemeleri</strong></li>
+<li><strong>Otomasyon iyileştirmeleri</strong></li>
+<li>Erişim: GitHub → <strong>Releases</strong> sekmesi.</li>
+</ul>
+<h2 id="3-changelogmd">3. CHANGELOG.md</h2>
+<ul>
+<li><code>CHANGELOG.md</code>, değişiklikleri kronolojik sırayla listeler.</li>
+<li>Format:
+  ```
+  ## [vX.Y.Z] - YYYY-MM-DD
+  ### Added</li>
+<li>Yeni içerik veya özellik</li>
+</ul>
+<p>### Changed
+  - Mevcut sayfalarda güncellemeler</p>
+<p>### Fixed
+  - Hata düzeltmeleri
+  ```
+- Anlamlı her değişiklikte changelog’u güncellemek katkıcı sorumluluğudur.</p>
+<h2 id="4-etiketleme-tagging-stratejisi">4. Etiketleme (Tagging) Stratejisi</h2>
+<ul>
+<li>Semantik versiyonlama: <code>vMAJOR.MINOR.PATCH</code></li>
+<li><strong>MAJOR</strong>: Geriye dönük uyumsuz kırıcı değişiklikler</li>
+<li><strong>MINOR</strong>: Yeni içerik/özellikler</li>
+<li><strong>PATCH</strong>: Küçük düzeltmeler</li>
+<li>Örnek:</li>
+<li><code>v1.0.0</code> — ilk genel sürüm</li>
+<li><code>v1.1.0</code> — 3 yeni rehber eklendi</li>
+<li><code>v1.1.1</code> — yazım ve bağlantı düzeltmeleri</li>
+</ul>
+<h2 id="5-dal-branch-stratejisi">5. Dal (Branch) Stratejisi</h2>
+<ul>
+<li><code>main</code> <strong>kilitlidir</strong> — doğrudan push kapalıdır.</li>
+<li>Tüm değişiklikler fork’tan gelen <strong>Pull Request</strong>’lerle yapılır.</li>
+<li>Dal isimleri:</li>
+<li><code>feature/&lt;kısa-açıklama&gt;</code> — yeni içerik/özellik</li>
+<li><code>fix/&lt;kısa-açıklama&gt;</code> — hata/düzeltme</li>
+<li><code>docs/&lt;kısa-açıklama&gt;</code> — yalnız dokümantasyon</li>
+<li>PR şartları:</li>
+<li>Otomatik kontrollerden geçmek</li>
+<li>İnceleme ve onay almak</li>
+</ul>
+<h2 id="6-neden-onemli">6. Neden Önemli?</h2>
+<ul>
+<li><strong>Şeffaflık</strong>: Ne zaman, neyin canlıya alındığı net görünür.</li>
+<li><strong>Kalite</strong>: Eş değerlendirme (peer review) tutarlılığı artırır.</li>
+<li><strong>İzlenebilirlik</strong>: Etiket ve changelog, sürümler arasında takibi kolaylaştırır.</li>
+</ul>
+<h2 id="topluluk-ogrenimi">Topluluk Öğrenimi</h2>
+<p>Bu kılavuzu takip ederek yöneticiler, katkıcılar ve okuyucular kolayca:
+- Yenilikleri görebilir
+- İş akışını anlayabilir
+- Tahmin yürütmeden projeye dahil olabilir</p>

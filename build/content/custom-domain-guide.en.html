@@ -1,0 +1,46 @@
+<p>This guide walks you through connecting a <strong>Hostinger-managed domain</strong> to a <strong>GitHub Pages</strong> site, using the example <code>all-in-one.foundral.tech</code>.</p>
+<h2 id="1-prerequisites">1. Prerequisites</h2>
+<ul>
+<li>A GitHub Pages-enabled repository:<br />
+  Example: https://github.com/cevherdogan/all-in-one<br />
+  Default Pages URL: https://cevherdogan.github.io/all-in-one/</li>
+<li>Access to Hostinger’s <strong>hPanel</strong> for <code>foundral.tech</code>.</li>
+</ul>
+<h2 id="2-add-a-cname-record-in-hostinger">2. Add a CNAME Record in Hostinger</h2>
+<ol>
+<li>Log into Hostinger: <a href="https://hpanel.hostinger.com/domain/foundral.tech/dns">DNS Zone Editor</a></li>
+<li>Click <strong>Add New Record</strong>.</li>
+<li>Fill in:
+   <code>Type: CNAME
+   Name: all-in-one   (without @)
+   Target: cevherdogan.github.io
+   TTL: 3600</code></li>
+<li>Save changes.</li>
+</ol>
+<h2 id="3-configure-github-pages">3. Configure GitHub Pages</h2>
+<ol>
+<li>Go to your repo’s <strong>Settings → Pages</strong>.  </li>
+<li>In <strong>Custom domain</strong>, enter:
+   <code>all-in-one.foundral.tech</code></li>
+<li>Check <strong>Enforce HTTPS</strong> (enable after DNS resolves).</li>
+</ol>
+<h2 id="4-wait-for-dns-propagation">4. Wait for DNS Propagation</h2>
+<ul>
+<li>This can take 15 minutes to 24 hours.</li>
+<li>Verify with:<br />
+<code>nslookup all-in-one.foundral.tech</code>
+  or online tools like <a href="https://www.whatsmydns.net/">whatsmydns.net</a>.</li>
+</ul>
+<h2 id="5-confirm-your-site-is-live">5. Confirm Your Site is Live</h2>
+<p>Once DNS resolves and HTTPS is enforced, your site will be live at:<br />
+<strong>https://all-in-one.foundral.tech/</strong></p>
+<h2 id="example-deployment-log">✅ Example Deployment Log</h2>
+<blockquote>
+<p>“Your site is live at https://all-in-one.foundral.tech/<br />
+Last deployed by @cevherdogan — 13 minutes ago”</p>
+</blockquote>
+<h2 id="community-learning">Community Learning</h2>
+<p>This process is now documented for all contributors to:
+- Learn domain mapping basics
+- Replicate for their own projects
+- Contribute localized translations of this guide</p>

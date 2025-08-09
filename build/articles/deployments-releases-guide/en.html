@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding Deployments, Releases, and Branch Strategy</title>
+  <meta name="description" content="Guide for contributors: using deployments, release notes, changelog, tagging, and branching strategy in ALL-IN-ONE.">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Understanding Deployments, Releases, and Branch Strategy</h1>
+    <div class="nav">
+      <a class="button" href="tr.html">Türkçe</a>
+      <a class="button" href="../../site/index.html">Home</a>
+    </div>
+    
+    <p class="meta">
+      <span class="badge">Guide</span><span class="badge">Git Workflow</span><span class="badge">Release Management</span>
+    </p>
+    
+  </div>
+</header>
+<main>
+  <div class="container">
+    <article class="card">
+      <p>This guide helps contributors and readers navigate <strong>deployment history</strong>, <strong>release notes</strong>, and our <strong>branching/tagging strategy</strong> in the ALL-IN-ONE project.</p>
+<h2>1. Checking Deployments</h2>
+<ul>
+<li>Visit: [GitHub → Deployments](https://github.com/cevherdogan/all-in-one/deployments)</li>
+<li>Each deployment entry shows:</li>
+<li>**Environment** (e.g., `github-pages`)</li>
+<li>**Commit hash**</li>
+<li>**Deployed by**</li>
+<li>**Timestamp**</li>
+<li>Use this to confirm when the latest content went live.</li>
+</ul>
+<h2>2. Reading Release Notes</h2>
+<ul>
+<li>Release notes summarize what changed in a given tagged version.</li>
+<li>Future releases will include:</li>
+<li>**New articles/guides**</li>
+<li>**Template updates**</li>
+<li>**Automation improvements**</li>
+<li>Access: GitHub → **Releases** tab.</li>
+</ul>
+<h2>3. CHANGELOG.md</h2>
+<ul>
+<li>The `CHANGELOG.md` file lists changes in chronological order.</li>
+<li>Format:</li>
+</ul>
+<p>```</p>
+<h2>[vX.Y.Z] - YYYY-MM-DD</h2>
+<p>### Added</p>
+<ul>
+<li>New content or feature</li>
+</ul>
+<p>### Changed</p>
+<ul>
+<li>Updates to existing pages</li>
+</ul>
+<p>### Fixed</p>
+<ul>
+<li>Bug fixes or corrections</li>
+</ul>
+<p>```</p>
+<ul>
+<li>Contributors should update it for every meaningful change.</li>
+</ul>
+<h2>4. Tagging Strategy</h2>
+<ul>
+<li>Semantic versioning: `vMAJOR.MINOR.PATCH`</li>
+<li>**MAJOR**: Breaking changes</li>
+<li>**MINOR**: New content/features</li>
+<li>**PATCH**: Fixes or minor updates</li>
+<li>Example:</li>
+<li>`v1.0.0` — initial public release</li>
+<li>`v1.1.0` — added 3 new guides</li>
+<li>`v1.1.1` — fixed typos and links</li>
+</ul>
+<h2>5. Branching Strategy</h2>
+<ul>
+<li>`main` is **locked** — direct pushes are disabled.</li>
+<li>All changes come through **Pull Requests** from forks.</li>
+<li>Suggested branch naming:</li>
+<li>`feature/<short-description>` — new content or functionality</li>
+<li>`fix/<short-description>` — bug or typo fixes</li>
+<li>`docs/<short-description>` — documentation-only changes</li>
+<li>PRs must:</li>
+<li>Pass automated checks</li>
+<li>Be reviewed and approved</li>
+</ul>
+<h2>6. Why This Matters</h2>
+<ul>
+<li>**Transparency**: Clear history of what was deployed and when.</li>
+<li>**Quality Control**: Peer review ensures accuracy and consistency.</li>
+<li>**Traceability**: Tags and changelog entries help track features across versions.</li>
+</ul>
+<h2>Community Learning</h2>
+<p>Following this guide ensures everyone — maintainers, contributors, and readers — can easily:</p>
+<ul>
+<li>See what’s new</li>
+<li>Understand the workflow</li>
+<li>Join the project without guesswork</li>
+</ul>
+    </article>
+  </div>
+</main>
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Bilingual Articles. MIT Licensed.</p>
+  </div>
+</footer>
+</body>
+</html>
