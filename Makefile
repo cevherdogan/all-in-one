@@ -1,10 +1,10 @@
-.PHONY: setup install-deps build content articles preview all brewery
+.PHONY: setup install-deps build content articles preview repos brewery all
 
 setup:
 	python3 -m venv .venv && . .venv/bin/activate
 
 install-deps:
-	pip3 install jinja2 pyyaml markdown
+	pip3 install jinja2 pyyaml markdown pillow
 
 build:
 	python3 scripts/generate.py
@@ -19,8 +19,12 @@ articles:
 preview:
 	python3 -m http.server 8000
 
-brewery:
+repos:
+	@echo "→ Syncing public repos for $(shell echo $${GITHUB_USER:-cevherdogan})"
+	python3 scripts/sync_public_repos.py
 	python3 scripts/fetch_brewery_thumbs.py
+
+brewery:
 	python3 scripts/build_brewery_section.py
 
 # one-shot everything you'd usually run

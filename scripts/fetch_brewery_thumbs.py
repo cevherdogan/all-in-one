@@ -1,44 +1,48 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import json, yaml, urllib.request, urllib.error, time
+import yaml, urllib.request, urllib.error
+from PIL import Image
+from io import BytesIO
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "brewery.yaml"
-OUTDIR = ROOT / "assets" / "brewery"
-OUTDIR.mkdir(parents=True, exist_ok=True)
+OUT  = ROOT / "assets" / "brewery"
+OUT.mkdir(parents=True, exist_ok=True)
 
-def og_url(owner, name):
-    # GitHub Open Graph: token gerektirmez; sorgu paramı değiştirerek cache-bust yaparız
-    return f"https://opengraph.githubassets.com/1/{owner}/{name}?t={int(time.time())}"
-
-def fetch_png(url, dest: Path):
+def fetch_bytes(url:str)->bytes|None:
     try:
-        with urllib.request.urlopen(url, timeout=20) as r:
-            data = r.read()
-        dest.write_bytes(data)
-        return True
-    except urllib.error.HTTPError as e:
-        print(f"[warn] {dest.name}: {e}")
+        with urllib.request.urlopen(url, timeout=25) as resp:
+            return resp.read()
     except Exception as e:
-        print(f"[warn] {dest.name}: {e}")
-    return False
+        print(f"[warn] fetch: {url} -> {e}")
+        return None
+
+def save_webp(raw:bytes, dest:Path):
+    im = Image.open(BytesIO(raw)).convert("RGB")
+    im.thumbnail((640,360))
+    dest = dest.with_suffix(".webp")
+    im.save(dest, "WEBP", quality=70, method=6)
+    return dest
 
 def main():
     cfg = yaml.safe_load(DATA.read_text(encoding="utf-8"))
-    results = []
-    for repo in cfg.get("repos", []):
-        owner, name = repo["owner"], repo["name"]
-        fn = OUTDIR / f"{owner}-{name}.png"
-        ok = fetch_png(og_url(owner, name), fn)
-        repo["thumb"] = f"/assets/brewery/{fn.name}" if ok else "/assets/img/thumb-placeholder.webp"
-        results.append(repo)
-        print(("[ok] " if ok else "[skip] ") + f"{owner}/{name}")
-    (ROOT / "data" / "brewery.cache.json").write_text(
-        json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-    print(f"[done] thumbs -> {OUTDIR}")
+    ok = 0
+    for r in cfg.get("repos", []):
+        owner, name = r["owner"], r["name"]
+        url   = f"https://opengraph.githubassets.com/1/{owner}/{name}"
+        dest  = OUT / f"{owner}-{name}"
+        if dest.with_suffix(".webp").exists():  # idempotent
+            print(f"[skip] exists {dest.with_suffix('.webp').name}")
+            ok += 1
+            continue
+        raw = fetch_bytes(url)
+        if not raw:
+            continue
+        out = save_webp(raw, dest)
+        print(f"[ok] {out.relative_to(ROOT)}")
+        ok += 1
+    print(f"[done] optimized thumbs: {ok}/{len(cfg.get('repos', []))}")
 
 if __name__ == "__main__":
     main()
-
 
