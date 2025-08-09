@@ -1,7 +1,7 @@
 # 📚 Content Index – All-in-One Project
 
 This directory contains bilingual guides and articles. The table below is **auto-generated**; do not edit manually.
-_Last updated: 2025-08-09 06:15 UTC_
+_Last updated: 2025-08-09 06:16 UTC_
 
 | File | Language | Summary | Links |
 |------|----------|---------|-------|
