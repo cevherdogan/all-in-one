@@ -1,3 +1,7 @@
+---
+title: "Dpp.Tr"
+updated: 2025-08-09
+---
 
 ---
 title: "Dijital Ürün Pasaportu: Satın Aldığınız Her Üründe Şeffaflığın Geleceği"

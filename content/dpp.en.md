@@ -1,3 +1,7 @@
+---
+title: "Dpp.En"
+updated: 2025-08-09
+---
 
 ---
 title: "Digital Product Passport: The Future of Transparency in Every Product You Buy"
