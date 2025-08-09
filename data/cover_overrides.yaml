@@ -1,0 +1,11 @@
+overrides:
+  - owner: cevherdogan
+    name: inframap
+    branch: master
+    path: docs/inframap.png
+  - owner: cevherdogan
+    name: gitflow-meta-tools
+    branch: main
+    path: logo.png
+
+

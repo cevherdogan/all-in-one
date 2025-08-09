@@ -20,9 +20,8 @@ preview:
 	python3 -m http.server 8000
 
 repos:
-	@echo "→ Syncing public repos for $(shell echo $${GITHUB_USER:-cevherdogan})"
 	python3 scripts/sync_public_repos.py
-	python3 scripts/fetch_brewery_thumbs.py
+	python3 scripts/fetch_repo_covers.py
 
 brewery:
 	python3 scripts/build_brewery_section.py
