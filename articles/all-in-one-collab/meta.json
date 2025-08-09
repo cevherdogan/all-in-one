@@ -1,7 +1,11 @@
 {
-  "title": "Open Collaboration: Profit & Non-Profit Paths in ALL-IN-ONE",
-  "summary": "How the project invites contributors into both profit and non-profit tracks: contribution types, governance, attribution, and ways to get involved.",
-  "thumb": "webm.png"
+  "title": "All-in-One Collaboration Guide",
+  "description": "A practical guide to setting up and managing the all-in-one collaboration environment with clear steps for configuration and usage.",
+  "thumb": "articles/all-in-one-collab/thumb.webp",
+  "tags": ["collaboration", "guide", "workflow", "setup"],
+  "lang": ["en", "tr"],
+  "created": "2025-08-08",
+  "updated": "2025-08-08",
+  "version": "1.0.0"
 }
-
 
