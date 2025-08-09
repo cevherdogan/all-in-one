@@ -1,6 +1,6 @@
 {
   "title": "Understanding Deployments, Releases, and Branch Strategy",
   "summary": "A concise guide to Pages builds, Release Drafter, and a clean branch model for stable main and fast iteration without CI friction.",
-  "thumb": "thumb.webp"
+  "thumb": "webm.png"
 }
 
