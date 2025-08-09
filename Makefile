@@ -1,4 +1,4 @@
-.PHONY: setup install-deps build content articles preview all
+.PHONY: setup install-deps build content articles preview all brewery
 
 setup:
 	python3 -m venv .venv && . .venv/bin/activate
@@ -19,6 +19,10 @@ articles:
 preview:
 	python3 -m http.server 8000
 
+brewery:
+	python3 scripts/fetch_brewery_thumbs.py
+	python3 scripts/build_brewery_section.py
+
 # one-shot everything you'd usually run
-all: content articles build
+all: content articles brewery build
 
